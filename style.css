@@ -1,0 +1,573 @@
+html    {
+    margin: 0;
+    padding: 0;
+    font-size: 62.5%;
+    font-family: 'Open-sans', sans-serif ;
+    scroll-behavior: smooth;
+}
+
+body    {
+    background-color: rgb(236, 239, 242);
+}
+#wrapper    {
+    background-color: rgb(236, 239, 242);
+    width: 98%;
+
+    margin: 3rem auto 3rem auto;
+    max-width: 140rem;
+    box-shadow: 1.2rem 1.2rem 2.4rem rgba(0, 0, 0, 0.3);
+}
+
+/* ==============================
+    TYPOGRAPHY
+    ============================== */
+
+    h1{
+        font-size: 4.5rem;
+        margin-bottom: 2rem;
+        letter-spacing: -2px;
+        color: rgba(37, 34, 34, 0.92);
+        width: 70rem;
+    }
+
+    #this {
+        width: 60rem;
+    }
+    h2{
+        text-align: center;
+        font-size:1.8rem;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        font-weight: 300;
+        color: rgba(37, 34, 34, 0.92) ;
+    }
+    h3{
+        font-size: 3rem;
+        font-weight: 600;
+        line-height: 3rem;
+        color: rgba(37, 34, 34, 0.92);
+        margin-top: 0.1rem;
+        margin-bottom: 0.1rem;
+        padding: 2.4rem 1.2rem 0 1.2rem;
+        
+    }
+    h4{
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+        font-weight: 600;
+        margin: 0;
+        padding: 1.2rem 1.2rem 0 1.2rem;
+        color:rgb(54,117,136);
+    }
+
+    ul{
+        text-align: center;
+        padding: 0;
+        margin: 0 auto;
+        align-self: center;
+    }
+    li{
+        display: inline;
+        font-size: 1.3rem;
+        font-weight: 700;
+        color:rgba(255, 255, 255, 1);
+        padding: 0 1.2rem;
+    }
+
+    li a {
+        color:rgba(255, 255, 255, 1);
+        text-decoration:none ;
+    }
+
+    .heroLine   {
+        height: 0.8rem;
+        background-color: rgba(37, 34, 34, 0.92);
+        width: 57rem;
+    }
+    p   {
+        margin-top: 2rem;
+        font-size: 1.4rem;
+        line-height: 2.1rem;
+    }
+    .myCard p{
+        padding-left: 1.2rem;
+        padding-right: 1rem;
+    }
+
+    .dayTitle   {
+        color: rgba(255, 255, 255, 1);
+        height: 0.2rem;
+        position: relative;
+        bottom: 0.8rem;
+    }
+
+    .pBold  {
+        font-weight: 700;
+    }
+
+    .modalTitle    {
+        padding-left: 0;
+    }
+
+    .modalTitleLight {
+        font-weight: 300;
+        color: rgba(0, 0, 0, 0.6);
+    }
+
+    .modalTitleBlue   {
+        color: rgba(54, 117, 136,0.8);
+    }
+
+    #amir   {
+        width: 5rem;
+    }
+
+   
+
+    .footer h4{
+        font-weight: 700;
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+        margin-right: 10px;
+    }
+
+    .Classone {
+        margin-left: -1.3rem;
+        margin-bottom: 0.7rem;
+        margin-top: -1rem;
+    }
+
+    #idTwo  {
+        margin-bottom: 0.7rem;
+        margin-top: -1rem;
+    }
+
+    #idOne  {
+        margin-top: -1.8rem;
+    }
+
+    #idThree    {
+        margin-left: 1.2rem
+    }
+
+    #idFour   {
+        padding-left: 7rem;
+    }
+
+    #idFive   {
+        padding-left: 7rem;
+    }
+
+    #hiba   {
+        margin-left: 1rem;
+    }
+
+    
+    
+
+
+/* ==================================
+    LAYOUT
+    ======================================*/
+    header  {
+        width: 100%;
+        background-image: url(hero.jpg);
+        background-size:cover;
+        background-position: center;
+        min-height: 78rem;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 2rem;
+    }
+
+    .heroColumn:nth-child(1)  {
+        margin-left: 50px;
+        margin-top: 225px;
+    }
+    .heroTextbox    {
+        margin-left: 10rem;
+    }
+    .cardLayout {
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 2rem;
+            width: 92%;
+            margin: 2rem auto;
+        }
+    .myCard {
+            background-color: rgba(255, 255, 255, 1);
+            box-shadow: 0.8rem 0.8rem 1.6rem rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            margin-top: auto;
+            border-radius: 1.6rem 1.6rem 1.6rem 1.6rem; 
+        }
+    .myCard img {
+            width: 100%;
+            border-radius: 1.6rem 1.6rem 0 0; 
+    }
+
+    .cardBar    {
+            width: 100%;
+            height: 8rem;
+            background-color: rgb(54,117,136);
+            display: flex;
+            flex-direction: column;
+            border-radius: 0 0 1.6rem 1.6rem;
+        }
+
+    .modalDialog    {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+        opacity: 0;
+        pointer-events: none;
+        display: flex;
+        flex-direction: column;
+        z-index: 99999;
+    }
+
+
+
+    .modalDialog:target {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .modalDialog > div  {
+        background-color: rgba(255 , 255, 255, 1);
+        width: 60%;
+        margin: 10% auto;
+        border-radius: 0.6rem;
+        padding: 3rem 6rem;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .breakSection   {
+        background-image: url(arch1.jpg);
+        background-size: cover;
+        margin-top: 7rem;
+        width: 100%;
+        height: 78rem;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 2rem;
+
+    }
+
+    .sectionTextBox {
+        margin-top: 8rem;
+        margin-left: 12rem;
+        position: relative;
+    }
+
+    #registerAnchor {
+        position: relative;
+        
+    }
+
+    #sara   {
+        position: relative;
+        right: 120px;
+        top: 120px;
+        
+    }
+
+
+    .timeTable  {
+        width: 96%;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 2rem;
+        margin: 2rem auto;
+        
+    }
+
+    .dayBar {
+        background: linear-gradient(45deg, rgba(29, 111, 126, 0.45) 0%, rgba(54, 117, 136, 0.6));
+        height: 6rem;
+        border-radius: 0.4rem;
+
+    }
+
+    .dayLine    {
+        height: 0.8rem;
+        width: 60%;
+        background-color: rgba(54, 117, 136, 0.5);
+    }
+
+    
+
+    .buttonGroup    {
+        display: flex;
+        flex-direction: row;
+
+    }
+
+
+    textarea   {
+        display: block;
+        outline: none;
+        border: none;
+        resize: none;
+        background-color: rgba(0, 0, 0, 0.12);
+        margin: 1.5rem auto;
+        width: 100%;
+        font-family: 'Open Sans', sans-serif;
+        height: 3rem;
+        font-size: 1.4rem;
+        line-height: 2.8rem;
+    
+    }
+
+    .myDivider  {
+        height: 1rem;
+    }
+
+    .registerAnchor {
+        margin-right: 0;
+    }
+
+    .contactSection {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-areas: 'one two two';
+        gap: 3rem;
+        margin-left: 0.2rem;
+        
+    }
+
+    .contactComponent:nth-child(1)  {
+        grid-area: one;
+        margin-left: 3rem;
+        margin-bottom: 2rem;
+    }
+    .contactComponent:nth-child(2)  {
+        grid-area: two;
+    }
+
+    .contactComponent img  {
+        width: 100%;
+        background-position:right
+
+    }
+
+    .buttonGroup    {
+        display: flex;
+        flex-direction: row;
+    }
+
+    footer  {
+        background-color: rgba(54, 117, 136, 0.5);
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 2rem;
+    }
+
+    .footerColumn   {
+        padding: 4rem 3rem;
+    }
+
+    .footerLine {
+        height: 0.2rem;
+        background-color: rgba(255 , 255, 255, 1);
+        margin: 1.2rem 0;
+    }
+
+    footer img{
+        width: 62%;
+    }
+
+
+
+    
+
+/*  =================================
+    LINKS, NAVIGATIONS ETC
+    =================================*/
+    nav{
+        background-color: rgba(54, 117, 136, 0.85);
+        height: 4rem;
+        box-shadow: 0 0.5rem 0.8rem rgba(0, 0, 0, 0.2);
+        position: sticky;
+        top: 0;
+        display: flex;
+        z-index: 99999;
+    }
+    
+    .myButton   {
+        display: inline-block;
+        font-size: 1.4rem;
+        color: rgba(255, 255, 255, 1);
+        background-color: rgba(54, 117, 136, 0.85);
+        font-weight: 700;
+        padding: 1.8rem 4rem;
+        margin-top: 1rem;
+        width: 12rem;
+        text-decoration: none;
+        border-radius: 0.4rem;
+        transition: all ease 0.4s;
+        box-shadow: -0.4rem 0.4rem 0.8em rgba(0, 0, 0, 0.3);
+    }
+    .myButton:hover {
+        background-color: rgb(54,117,136);
+        box-shadow: 0.8rem 0.8rem 1.6rem rgba(0, 0, 0, 0.25);
+    }
+    .cardButton {
+        background-color:rgb(231, 238, 239) ;
+        color: rgba(0, 0, 0, 0.7);
+        font-size: 1.4rem;
+        font-weight: 600;
+        padding: 1.8rem 2.5rem;
+        border-radius: 0.4rem;
+        box-shadow: -0.4rem 0.4rem 0.8rem rgba(0, 0, 0, 0.2);
+        margin: auto;
+        transition: all ease 0.4s ;
+    }
+    .cardButton:hover {
+        color: rgba(0, 0, 0, 1);
+        box-shadow: -0.8rem 0.8rem 1.6rem rgba(0, 0, 0, 0.2)
+    }
+
+    .closeButton    {
+        position: absolute;
+        top: -1rem;
+        right: -1rem;
+        font-size: 2rem;
+        font-weight: 700;
+        background-color: rgba(0,0, 0,1);
+        color: rgba(255 , 255, 255, 1);
+        text-decoration: none;
+        width: 4rem;
+        line-height: 4rem;
+        text-align: center;
+        border-radius: 2rem;
+        transition: all ease 0.3s;
+
+    }
+
+    .closeButton:hover  {
+        box-shadow: 0 0.8rem 1.6rem rgba(0,0, 0,0.2);
+        background-color: brown;
+    }
+    
+    .buttonGroup .myButton  {
+        margin-top: 1rem;
+        margin-right: 1.5rem;
+    }
+
+   
+
+    footer a{
+        display: block;
+        font-size: 1.2rem;
+        text-decoration: none;
+        padding: 0.3rem 0;
+        color: rgba(255, 255, 255, 1);
+        font-weight: 500;
+        width: fit-content;
+    }
+
+    
+
+/* ============================
+    RESPONSIVE ELEMENTS
+    ===========================*/
+
+    @media  (max-width: 1024px)  {
+        h3{
+            font-size: 2rem;
+            line-height: 2rem;
+        }
+        .cardLayout     {
+            grid-template-columns: repeat(2,1fr);
+        }
+
+        .contactSection{
+            grid-template-columns: repeat(2,1fr);
+          
+        }
+
+        .contactComponent:nth-child(2)  {
+            margin-left: 4rem;
+        }
+        .footer {
+            grid-template-columns: repeat(2,1fr);
+
+        }
+    }
+
+    @media  (max-width: 620px)   {
+          header  {
+            grid-template-columns: repeat(1,1fr);
+            min-height: 62rem;
+            background-image: none;
+        }
+        .heroTextBox    {
+            margin: 0 auto;
+            width: 60%;
+        }
+
+        .cardLayout {
+            grid-template-columns: repeat(1,1fr);
+        }
+
+        .breakSection   {
+            grid-template-columns: repeat(1,1fr);
+            
+        }
+        .breakComponent:nth-child(1), .breakComponent:nth-child(2)  {
+            display: none;
+        }
+        .breakComponent:nth-child(3)    {
+            background-color: rgba(211, 211, 211, 0.92);
+            width: 65%;
+            
+            margin:auto;
+            
+            padding: 0 10% 4rem 10%;
+            border-radius: 0.4rem;
+    
+        }
+
+       
+        .timeTable  {
+            grid-template-columns: repeat(1,1fr);
+            width: 80%;
+        }
+
+        .contactSection {
+            grid-template-columns: repeat(1,1fr);
+        }
+
+        .contactComponent:nth-child(2)  {
+            width: 0;
+           
+        }
+    
+        footer{
+            grid-template-columns: repeat(1,1fr);
+        }
+    
+        .footerColumn:nth-child(2), .footerColumn:nth-child(3), .footerColumn:nth-child(4)  {
+            padding-top: 0;
+        }
+
+        #this   {
+            width: 30rem;
+        }
+
+        h1{
+            width: 30rem;
+        }
+
+        .heroLine   {
+            width: 35rem;
+        }
+
+    }
